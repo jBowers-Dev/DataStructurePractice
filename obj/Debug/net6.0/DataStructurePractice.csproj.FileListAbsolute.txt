@@ -1,0 +1,12 @@
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\bin\Debug\net6.0\DataStructurePractice.deps.json
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\bin\Debug\net6.0\DataStructurePractice.dll
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\bin\Debug\net6.0\DataStructurePractice.pdb
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.csproj.AssemblyReference.cache
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.AssemblyInfoInputs.cache
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.AssemblyInfo.cs
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.csproj.CoreCompileInputs.cache
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.dll
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\refint\DataStructurePractice.dll
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\DataStructurePractice.pdb
+C:\Users\Josh Bowers\Documents\_D_Backup\_My_Github\DataStructurePractice\obj\Debug\net6.0\ref\DataStructurePractice.dll
