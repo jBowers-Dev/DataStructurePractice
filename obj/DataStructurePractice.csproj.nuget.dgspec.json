@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh Bowers\\Documents\\_D_Backup\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj": {}
+    "C:\\Users\\Josh Bowers\\Documents\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh Bowers\\Documents\\_D_Backup\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj": {
+    "C:\\Users\\Josh Bowers\\Documents\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh Bowers\\Documents\\_D_Backup\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj",
+        "projectUniqueName": "C:\\Users\\Josh Bowers\\Documents\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj",
         "projectName": "DataStructurePractice",
-        "projectPath": "C:\\Users\\Josh Bowers\\Documents\\_D_Backup\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj",
+        "projectPath": "C:\\Users\\Josh Bowers\\Documents\\_My_Github\\DataStructurePractice\\DataStructurePractice.csproj",
         "packagesPath": "C:\\Users\\Josh Bowers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josh Bowers\\Documents\\_D_Backup\\_My_Github\\DataStructurePractice\\obj\\",
+        "outputPath": "C:\\Users\\Josh Bowers\\Documents\\_My_Github\\DataStructurePractice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Josh Bowers\\AppData\\Roaming\\NuGet\\NuGet.Config",

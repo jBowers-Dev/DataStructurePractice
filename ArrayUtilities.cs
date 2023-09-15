@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace JoshBowersDEV.DataStructurePractice
+﻿namespace JoshBowersDEV.DataStructurePractice
 {
     public static class ArrayUtilities
     {

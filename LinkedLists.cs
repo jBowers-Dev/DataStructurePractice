@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataStructurePractice
+﻿namespace DataStructurePractice
 {
     #region Nodes
 
@@ -39,18 +32,29 @@ namespace DataStructurePractice
 
     #region Linked Lists
 
+    /// <summary>
+    /// Data structure consisting of nodes where each node contains data and a reference to the next node.
+    /// </summary>
     public class SinglyLinkedList<T>
     {
         private SinglyLinkedListNode<T> _head;
 
-        public void InsertBefore(T data)
+        /// <summary>
+        /// Adds the new data node to the beginning of the list
+        /// </summary>
+        /// <param name="data">The data node to prepend</param>
+        public void Prepend(T data)
         {
             SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<T>(data);
             newNode.Next = _head;
             _head = newNode;
         }
 
-        public void InsertAfter(T data)
+        /// <summary>
+        /// Adds the new data node to the end of the list
+        /// </summary>
+        /// <param name="data">The data node to append</param>
+        public void Append(T data)
         {
             SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<T>(data);
 
@@ -70,8 +74,8 @@ namespace DataStructurePractice
         /// <summary>
         /// Insert data at a specific index point
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="index">The data object used as an index.</param>
+        /// <param name="data">The data node to insert</param>
+        /// <param name="index">The data object used as an index for searching.</param>
         public void InsertAfter(T data, T index)
         {
             SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<T>(data);
@@ -95,9 +99,14 @@ namespace DataStructurePractice
             }
         }
 
+        /// <summary>
+        /// Delete's the specified data node.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">Called if the list is empty</exception>
         public void Delete(T data)
         {
-            Debug.Assert((_head != null), "List has not been instantiated.");
+            if (_head == null)
+                throw new InvalidOperationException("List has not been instantiated.");
 
             // Check to see if it's the head
             if (_head.Data.Equals(data))
@@ -125,13 +134,14 @@ namespace DataStructurePractice
                 current = null; // No more in the list, set it to null
                 return;
             }
+
+            // If the data was not found, throw an exception.
+            throw new InvalidOperationException("Data not found in the list.");
         }
 
         /// <summary>
-        /// Search the linked list for specific data
+        /// Search the linked list for a specific data node
         /// </summary>
-        /// <param name="data">The data search parameter</param>
-        /// <returns></returns>
         public T Search(T data)
         {
             SinglyLinkedListNode<T> current = _head;
@@ -146,7 +156,7 @@ namespace DataStructurePractice
         }
 
         /// <summary>
-        /// Return a list of the data
+        /// Return a list of the data nodes
         /// </summary>
         /// <returns></returns>
         public List<T> Traverse()
@@ -164,19 +174,36 @@ namespace DataStructurePractice
         }
     }
 
-    public class DoublyLinkedList<T> : SinglyLinkedList<T>
+    public class DoublyLinkedList<T>
     {
         private DoublyLinkedListNode<T> _head;
+        private DoublyLinkedListNode<T> _tail;
+
+        public DoublyLinkedList()
+        {
+            _head = null;
+            _tail = null;
+        }
 
         public void Prepend(T data)
         {
             DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<T>(data);
-            newNode.Next = _head;
-            _head.Previous = newNode;
-            _head = newNode;
+
+            if (_head == null)
+            {
+                // If the list is empty, set the new node as both head and tail.
+                _head = newNode;
+                _tail = newNode;
+            }
+            else
+            {
+                newNode.Next = _head;
+                _head.Previous = newNode;
+                _head = newNode;
+            }
         }
 
-        public void InsertBefore(T data, T index)
+        public void InsertAfter(T data, T index)
         {
             DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<T>(data);
             DoublyLinkedListNode<T> current = _head;
@@ -185,23 +212,40 @@ namespace DataStructurePractice
             {
                 if (current.Data.Equals(index))
                 {
-                    newNode.Previous = current.Previous;
-                    newNode.Next = current;
+                    newNode.Previous = current;
+                    newNode.Next = current.Next;
 
-                    if (current.Previous != null)
+                    if (current.Next != null)
                     {
-                        current.Previous.Next = newNode;
+                        current.Next.Previous = newNode;
                     }
                     else
                     {
-                        // If the index is the head node, update the head.
-                        _head = newNode;
+                        _tail = newNode;
                     }
 
-                    current.Previous = newNode;
+                    current.Next = newNode;
                     return;
                 }
                 current = current.Next;
+            }
+        }
+
+        public void Append(T data)
+        {
+            DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<T>(data);
+
+            if (_tail == null)
+            {
+                // If the list is empty, set the new node as both head and tail.
+                _head = newNode;
+                _tail = newNode;
+            }
+            else
+            {
+                newNode.Previous = _tail;
+                _tail.Next = newNode;
+                _tail = newNode;
             }
         }
 
